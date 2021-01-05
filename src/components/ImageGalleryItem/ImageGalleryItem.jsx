@@ -1,13 +1,15 @@
 import React from "react";
-import '../../index.css';
 
-const ImageGalleryItem = ({webformatURL,largeImageURL}) => {
- return (
-   <img
-   className="ImageGalleryItem-image"
-   src={webformatURL}
-   alt={largeImageURL}/>
- )
-}
+const ImageGalleryItem = ({ webformatURL, largeImageURL, onClick, query }) => {
+  return (
+    <img
+      className="ImageGalleryItem-image"
+      src={webformatURL}
+      alt={query}
+      onClick={onClick}
+      data-src={largeImageURL}
+    />
+  );
+};
 
 export default ImageGalleryItem;
